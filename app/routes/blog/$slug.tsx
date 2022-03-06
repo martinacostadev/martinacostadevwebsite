@@ -15,6 +15,9 @@ export default function PostSlug() {
   const post = useLoaderData();
 
   return (
-    <main dangerouslySetInnerHTML={{ __html: post.html }} />
+    <>
+      <h3 className="text-3xl font-semibold tracking-wide leading-10 mb-6">{post.title}</h3>
+      <main dangerouslySetInnerHTML={{ __html: post.html }} className="flex-auto" />
+    </>
   );
 }
